@@ -1,0 +1,53 @@
+
+<form action="/post" method="POST" enctype="multipart/form-data">
+  <link rel="stylesheet" href="/css/stylesheet.css" />
+  <!-- <div class="form_row"> 
+    <div class="post_form_group">
+      <div class="post"> 
+        <br>
+        <label for="inputTittle" class="post_title">Tittle</label>
+        <input name="tittle" type="tittle" class="form_control" id="inputTittle" placeholder="Tittle">
+      </div>
+      <br><br><br>
+      <div class="post_form_group">
+        <label for="inputcontent4" class="post_content">Content</label>
+        
+        <textarea name="content" type="content" rows="5" class="form_control" id="inputContent4" placeholder="Content">
+        </textarea>
+        <br><br><br><input type="file" name="img">
+        
+      </div>
+      <input class="post_form_group post_sub" type="submit" value="post">
+      
+    </form> -->
+    
+  <%= session[:page_msg]%>ここだよ！
+    
+    
+    <div class="post_form_row">
+      <div class="col1">
+        <label class="post_tittle" for="tittle">title</label><br>
+        <input name="tittle" type="tittle" class="post_form_control" id="tittle" placeholder="title" required>
+      </div><br><br>
+      <div class="col2">
+        <label class="post_content" for="content">content</label><br>
+        <textarea  name="content" type="content" class="post_form_control1" rows="5" placeholder="content" required></textarea>
+      </div><br><br>
+      <input type="file" name="img" required>
+      <br>
+      
+
+      <button class="submit" type="submit" style="font-size: 20px;">
+        <i class="fas fa-share"></i><span class="submit"> submit</span> 
+      </button>
+      
+      
+      
+      
+      
+      
+    </div>
+  </form>
+  
+  <br><br><br>
+  

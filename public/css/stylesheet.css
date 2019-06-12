@@ -1,0 +1,631 @@
+
+body {
+    background-color: #b0c4de;
+    color: #3E2723;
+    font-size: 17px;
+    font-family: 'Patua One', cursive, 'YuGothic'
+}
+
+
+/* ここからindex css */
+.login_buttom {
+    margin-top: 4%;
+}
+.lock_on_btn {
+	display: inline-block;
+	position: relative;
+	width: 220px;
+	height: 50px; 
+	line-height:50px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+    background: #b0c4de;
+    margin-left: 45%;
+    font-size: 35px;;
+}
+.lock_on_btn::before {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top: 1px solid white;
+    border-left: 1px solid white;	
+}
+.lock_on_btn::after {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+}
+.lock_on_btn span::before {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+}
+.lock_on_btn span::after {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;	
+}
+.lock_on_btn:hover {
+	 cursor: pointer;
+	 text-decoration: none;
+	 transition: transform .3s;
+	transform-origin: center;
+	transform: scale(0.9, 0.9); 
+}
+
+.tourism_industry {
+    font-size: 140px;
+    line-height: 160px;
+    font-family: 'Patua One', cursive;
+}
+/* 
+.welcome1 {
+    font-family: 'Pacifico', cursive;
+} */
+
+.welcome {
+    position: absolute;/*絶対配置*/
+    top: 108%;
+    left: 48%;
+    -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 50px;
+  padding: 0px;
+  line-height: 22px;
+  font-family: 'Patua One', cursive;
+}
+
+
+.bg {
+    position: relative;
+    text-align: center;
+}
+
+.bg p {
+    position: absolute;/*絶対配置*/
+    color: white;/*文字は白に*/
+    font-weight: bold;
+    font-family :Quicksand, sans-serif;
+  top: 58%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 50px;
+  padding: 0px;
+}
+
+.bg_img {
+    width: 40%;
+    margin-top: 12%;
+}
+
+
+/* ここからmypage css */
+.edit_msg {
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+
+.mypage_article {
+    padding-left: 1%; 
+    background-color: #fffafa;
+    
+}
+
+.daytime {
+    float: right;
+}
+
+.member {
+    color: #333333;
+}
+
+.article {
+    background-color: white;
+}
+
+.tourism_industry {
+    text-align: center;
+    padding-top: 15%;
+}
+
+.login_btn {
+    text-align: center;
+    padding-top: 5%;
+    size: 100px;
+}
+
+
+.icon2 {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    height: 40px;
+    margin-right: 6%;
+}
+
+.fa-trash {
+    font-size: 25px;
+    margin-left: 90%;
+}
+
+.fa-comment-dots {
+    font-size: 25px;
+    margin-right: 90%;
+}
+
+.climbing {
+    float: right;
+    width: 9%;
+position: fixed;
+    bottom: 45vh;
+    right: 28vw;
+    
+}
+
+/* mypageの鉛筆アイコン */
+#fab {/*円の部分*/
+    /* display: block; */
+    width: 56px;/*幅*/
+    height: 56px;/*高さ*/
+    background: navy;/*背景色*/
+    text-align: center;/*中央寄せ*/
+    border-radius: 50%;/*角丸く*/
+    transition: .3s;/*滑らかな動きに*/
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);/*影*/
+    /* float: left; */
+    
+    position: fixed;
+    bottom: 7vh;
+    right: 30vw;
+}
+
+.fa-pencil-alt {
+    color: #008080;
+}
+
+#fab:hover {/*ホバー時の影*/
+    box-shadow: 0 15px 20px 0 rgba(0,0,0,.14), 0 1px 30px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+}
+
+#fab i {/*中央のアイコン*/
+    color: white;
+    line-height: 56px;/*＝幅と高さ*/
+    font-size: 18px;/*サイズ*/
+}
+
+
+
+
+/* ここまでmypage css */
+
+
+
+/* ここからtop_page css */
+.grid_cell {
+    font-size: 14px;
+}
+
+#text_area {
+    text-align: center;
+}
+
+.greeting {
+    font-size: 19px;
+    text-align: center;
+}
+
+.ochi_card_form {
+    margin-top: -80%;
+}
+
+.ochi_icon {
+    margin-left: 12%;
+    margin-bottom: 5%;
+}
+
+.ochi_card {
+    margin-left: 1%;
+    margin-bottom: 6%;
+    opacity: 0.8;
+}
+
+
+.toppage {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 13%;
+    font-size: 25px;
+}
+
+.post_sub {
+    float: right;
+    margin-top: 40px;
+}
+
+.time {
+    margin-top: 10px;
+    float: right;
+}
+
+.acount_group_icon {
+    float: left;
+    margin-right: 14px;
+}
+
+.acount_group {
+    float: left;
+    margin-top: 1%;
+}
+
+.signup_btn {
+    text-align: center;
+    margin-top: 3%;
+    font-size: 49px;
+}
+
+
+.border_slide_btn {
+  position: relative;
+  display: inline-block;
+  color: #1B1B1B;
+  text-decoration: none;
+}
+.border_slide_btn:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffea00;
+}
+.border_slide_btn::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+.border_slide_btn:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+
+
+
+/* .signup_btn {
+    text-align: center;
+    padding-top: 2%;
+    /* outline-color:#e6b422; */
+} */
+
+.edit_form {
+    float: right;
+}
+
+.btn_pst {
+    position: fixed;
+    bottom: 10px; 
+    right: 350px;
+    padding: 6px 40px;
+}
+
+.profile_avatar {
+    float: left;
+    margin-top: 3px;
+    margin-left: -58px;
+}
+
+.title.content {
+    color: black
+}
+
+.image {
+    border-radius: 7px;
+}
+
+.fa-heart {
+    font-size: 28px;
+}
+
+.member {
+    padding-left: 23%;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.two {
+    width: 100%;
+}
+
+/* ここまでtop_page css */
+
+
+
+
+/* ここからedit_form css */
+.edit_title {
+    margin-top: 15%;
+    }
+
+.form_row {
+    font-size: 100%;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.edit_form_control {
+    width: 470px;
+    height: 50px;
+}
+
+.edit_form_control1 {
+    width: 470px;
+}
+
+.form-row {
+    text-align: center; 
+}
+
+.edit_submit {
+    margin-left: 30%;
+}
+
+.btn_submit {
+    margin-top: 4%;
+    font-size: 18px;
+}
+/* ここまでedit_form css */
+
+
+/* ここからpost css */
+.post_form_row {
+    text-align: center;
+    font-size: 100%;
+    margin-top: 1%;
+}
+
+.col1 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 13%;
+}
+
+.col2 {
+    font-size: 25px;
+}
+
+.post_form_control {
+    width: 470px;
+    height: 50px;
+}
+
+.post_form_control1 {
+    width: 470px;
+}
+
+.submit {
+    text-align: center;
+    margin-top: 3%;
+}
+/* ここまでpost css */
+
+
+/* ここからlogin css */
+.login_form_row {
+    text-align: center;
+    font-size: 100%;
+    margin-top: 1%;
+}
+
+.form-group1 {
+    height: 100px;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.login_form_control {
+    width: 470px;
+    height: 50px;
+}
+
+.login_form_control1 {
+    width: 470px;
+    height: 50px;
+}
+
+.login {
+    text-align: center;
+    margin-top: 6%;
+    
+}
+/* ここまでlogin css */
+
+
+/* ここからsignup css */
+.signup_form_row {
+    text-align: center;
+    font-size: 100%;
+}
+
+.signup_form_group {
+    height: 100px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.signup_form-control {
+    width: 470px;
+    height: 50px;
+}
+
+.signup_form-control1 {
+    width: 470px;
+    height: 50px;
+}
+
+.signup_form-control2 {
+    width: 470px;
+    height: 50px;
+}
+/* ここまでsignup css */
+
+
+
+.name {
+    text-align: center;
+    margin-top: 40%;
+    font-size: 20px;
+}
+
+.title.subtitle {
+    padding: 10%;
+    color: aquamarine;
+}
+
+
+.border {
+    border-width: thick;
+    margin-bottom: 10%;
+}
+
+
+
+/* ここからalbum css */
+.album_big {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.album_cmt {
+   margin-top:11%;
+   margin-left: 58%;
+    font-size: 44px;
+}
+
+.image_card {
+    width: 19%;
+    max-height: 19%;
+    flex-direction: row;
+    display: inline-flex;
+    display: inline-flex;
+   text-align: center;
+}
+
+.card {
+    max-height: 13%;
+}
+
+.sleeping {
+
+}
+
+.sleeping_img {
+    width: 84%;
+    margin-top: 27%;
+    margin-left: 1%;
+}
+
+
+
+/* .card {
+    flex-direction: row;
+    display: inline-flex;
+    margin: 1%;
+} */
+
+
+.image {
+    text-align: center;
+    flex-direction: row
+}
+
+
+#pos-f-t {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 999;
+}
+
+
+.nav {
+    margin-top: 0px;
+    /* margin-bottom: 8%; */
+    padding-top: 0%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+    /* margin-top: 0%;
+    padding-top: 0%; */
+}
+
+nav ul {
+    display: table;
+    margin: 0 auto;
+    padding: 0 ;
+    width: 80%;
+    text-align: center;
+    background-color: #fffafa;
+    width: 100%;
+    height: 50px;
+    margin-top: -25px;
+}
+
+.current {
+    margin: 5%;
+    font-size: 18px;
+    
+}
+nav li{
+    display: table-cell;
+    min-width: 50px;
+}
+nav a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #555;
+    padding-bottom: 5px;
+}
+nav li.current{
+    border-bottom: 3px solid #008080;
+}
+nav li:hover{
+    color: #E7DA66;
+    border-bottom: 3px solid #F0E475;
+}

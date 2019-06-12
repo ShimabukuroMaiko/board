@@ -1,0 +1,1058 @@
+@charset "UTF-8";
+
+/*
+==================================================
+
+   共通スタイル
+
+==================================================
+*/
+
+
+
+/*
+==================================================
+  基本設定
+==================================================
+*/
+
+/* ----- 背景・テキスト ----- */
+body {
+min-width: 900px;
+margin: 0;
+padding: 0;
+background-color: #efefef;
+color: #2a2a2a;
+font-size: 100%;
+font-family: "メイリオ", Arial, sans-serif;
+overflow-wrap: break-word;
+word-wrap: break-word;
+text-decoration-skip-ink: none;
+}
+
+/* ----- リンクテキスト ----- */
+a:link { color: #3366ff; }
+a:visited { color: #336699; }
+a:hover { color: #cc0000; }
+a:active { color: #cc0000; }
+
+/* ----- IE ----- */
+main {
+display: block;
+width: 100%;
+}
+
+/* ----- 行の高さ ----- */
+* {
+line-height: 100%;
+}
+
+/* ----- 画像の伸縮 ----- */
+img {
+width: inherit;
+max-width: 100%;
+height: auto;
+width /***/:auto;
+}
+
+/* ----- 動画の伸縮 ----- */
+.video div {
+position: relative;
+width: 100%;
+padding-bottom: 56.25%;
+}
+.video div iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+
+
+/* ----- ★767 ----- */
+@media screen and (max-width: 767px) {
+
+body {
+min-width: 0;
+}
+
+body.fixed {
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+}
+/* ----- /767 ----- */
+
+
+
+/* ----- 印刷用 ----- */
+@media print {
+
+body {
+width: 1000px;
+}
+
+}
+
+
+
+/*
+==================================================
+  レイアウト
+==================================================
+*/
+
+div.limit {
+max-width: 1060px;
+max-width: 1360px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+
+
+/* ----- ★767 ----- */
+@media screen and (max-width: 767px) {
+
+div.limit {
+padding: 0 5px;
+}
+
+}
+/* ----- /767 ----- */
+
+
+
+/*
+==================================================
+  ヘッダ
+==================================================
+*/
+
+#header {
+padding: 0 0 1px;
+background-color: #ffffff;
+border-top: 7px #ffd67b solid;
+box-shadow: 0 2px 3px 0 #c0c0c0;
+}
+#header a img {
+border: none;
+}
+
+/* ----- プレート ----- */
+#header div.plate {
+display: table;
+table-layout: fixed;
+width: 100%;
+margin: 13px 0;
+}
+#header div.plate > div {
+vertical-align: top;
+}
+
+/* ----- サイトタイトル ----- */
+#header div.logo {
+display: table-cell;
+width: 220px;
+}
+#header div.logo h1 {
+margin: 0;
+font-size: 100%;
+font-weight: normal;
+}
+#header div.logo a {
+display: inline-block;
+text-decoration: none;
+}
+#header div.logo span {
+display: block;
+}
+#header div.logo span.site {
+margin: 0 0 5px;
+}
+#header div.logo span.sub {
+font-size: 12px;
+font-weight: normal;
+color: #2a2a2a;
+text-align: center;
+}
+
+/* ----- 検索ボックス ----- */
+#header div.search {
+display: table-cell;
+width: auto;
+padding: 12px 20px 0;
+}
+#header div.search input[type="text"],
+#header nav.menu ul li.search input[type="text"] {
+padding: 2px 2px 3px !important;
+}
+
+/* ----- ヘッダお知らせ ----- */
+#header div.info {
+display: table-cell;
+width: 16em;
+padding: 14px 0 0;
+text-align: right;
+}
+#header div.info p {
+margin: 0;
+font-size: 90%;
+line-height: 140%;
+}
+
+/* ----- グローバルメニュー ----- */
+#header nav.menu {
+width: 100%;
+background-color: #5f5f5f;
+border-top: 2px #4a4a4a solid;
+border-bottom: 4px #4a4a4a solid;
+font-size: 90%;
+}
+
+#toggle {
+display: none;
+}
+
+#header nav.menu ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+#header nav.menu ul li {
+display: inline-block;
+}
+#header nav.menu ul li.search,
+#header nav.menu ul li.close {
+display: none;
+}
+
+#header nav.menu ul li a {
+display: block;
+padding: 16px 10px 15px;
+border-bottom: 2px #5f5f5f solid;
+text-decoration: none;
+color: #dfdfdf;
+}
+#header nav.menu ul li a:hover {
+background-color: #4a4a4a;
+border-bottom: 2px #4a4a4a solid;
+color: #ffffff;
+}
+
+#header nav.menu div.home ul li a.home,
+#header nav.menu div.html5 ul li a.html5,
+#header nav.menu div.css ul li a.css3,
+#header nav.menu div.html ul li a.html,
+#header nav.menu div.css ul li a.css,
+#header nav.menu div.color ul li a.color,
+#header nav.menu div.tool ul li a.tool,
+#header nav.menu div.jscript ul li a.jscript {
+border-bottom: 2px #c0c0c0 solid;
+}
+
+/* ----- 階層パス ----- */
+#header nav.path ol {
+margin: 0;
+padding: 15px 0 5px;
+font-size: 90%;
+}
+#header nav.path ol li {
+display: inline;
+margin: 0;
+line-height: 140%;
+}
+#header nav.path ol li a {
+padding: 0 13px 0 0;
+background: url(../../image/design/path.gif) no-repeat right;
+}
+#header nav.path ol li a.integrate {
+padding: 0;
+background: none;
+}
+
+/* ----- 下層ページタイトル ----- */
+#header div.title {
+background-color: #e3f0fb;
+}
+#header div.title h1 {
+margin: 0;
+padding: 12px 0 11px;
+font-size: 120%;
+line-height: 140%;
+}
+
+
+
+/* ----- ★767 ----- */
+@media screen and (max-width: 767px) {
+
+#header > div.limit {
+padding: 0;
+}
+
+#header {
+margin: 60px 0 0;
+padding: 0;
+border-top: none;
+box-shadow: none;
+}
+
+#header div.plate {
+display: block;
+margin: 0;
+}
+
+#header div.logo {
+display: block;
+position: fixed;
+top: 0;
+left: 0;
+height: 58px;
+width: 100%;
+margin: 0;
+background-color: #ffffff;
+border-top: 2px #ffd67b solid;
+box-shadow: 0 2px 3px 0 #c0c0c0;
+z-index: 101;
+}
+#header div.logo a {
+width: 170px;
+margin: 15px 0 0 8px;
+}
+#header div.logo span.site {
+margin: 0;
+}
+#header div.logo span.sub {
+display: none;
+}
+
+#header div.search {
+display: none;
+}
+
+#header div.info {
+display: none;
+}
+
+#header nav.menu {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+margin: 60px 0 0;
+padding: 0;
+background-color: transparent;
+border-top: none;
+border-bottom: none;
+transition: background-color 0.3s linear;
+z-index: 999;
+font-size: 100%;
+}
+body.fixed #header nav.menu {
+height: 100%;
+background-color: rgba(255, 255, 255, 0.5);
+}
+
+#header nav.menu div.toggle {
+display: inline-block;
+position: fixed;
+top: 1px;
+right: 5px;
+width: 50px;
+height: 58px;
+line-height: 58px;
+z-index: 999;
+}
+#toggle {
+display: inline-block;
+width: 50px;
+padding: 30px 0 7px;
+font-size: 11px;
+color: #f9f9f9;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+transition: background-image 0.6s;
+}
+#header div.toggle div.close {
+background: #5f5f5f url(../../image/design/open.gif) no-repeat center 8px;
+}
+#header div.toggle div.open {
+background: #5f5f5f url(../../image/design/close.gif) no-repeat center 8px;
+}
+
+#header nav.menu div.limit {
+padding: 0;
+}
+
+#header nav.menu ul {
+display: none;
+background-color: #5f5f5f;
+max-height: 480px;
+max-height: -webkit-calc(100vh - 60px);
+max-height: calc(100vh - 60px);
+overflow-y: auto;
+-webkit-overflow-scrolling: touch;
+}
+#header nav.menu ul li,
+#header nav.menu ul li.search,
+#header nav.menu ul li.close {
+display: list-item;
+}
+
+#header nav.menu ul li a {
+padding: 14px 35px 13px 13px;
+background: url(../../image/design/go_header.gif) no-repeat right;
+border-bottom: 1px #f9f9f9 solid;
+color: #f9f9f9;
+line-height: 140%;
+}
+#header nav.menu ul li a:hover {
+background-color: transparent;
+border-bottom: 1px #f9f9f9 solid;
+color: #f9f9f9;
+}
+
+#header nav.menu div.home ul li a.home,
+#header nav.menu div.html5 ul li a.html5,
+#header nav.menu div.css ul li a.css3,
+#header nav.menu div.html ul li a.html,
+#header nav.menu div.css ul li a.css,
+#header nav.menu div.color ul li a.color,
+#header nav.menu div.tool ul li a.tool,
+#header nav.menu div.jscript ul li a.jscript {
+background-color: #4a4a4a;
+border-bottom: 1px #f9f9f9 solid;
+}
+
+#header nav.menu ul li.search {
+padding: 18px 8px 17px;
+border-bottom: 1px #f9f9f9 solid;
+color: #f9f9f9;
+text-align: center;
+}
+#header nav.menu ul li.search a {
+padding: 0;
+background: none;
+border-bottom: none;
+line-height: 100%;
+}
+
+#header nav.menu ul li.close {
+padding: 10px 2px;
+text-align: center;
+cursor: pointer;
+}
+#header nav.menu ul li.close div {
+display: inline-block;
+padding: 12px 0 11px 50px;
+background: url(../../image/design/menu_up.gif) no-repeat left;
+color: #f9f9f9;
+}
+
+#header nav.path ol {
+padding: 15px 5px 14px;
+font-size: 100%;
+}
+#header nav.path ol li {
+line-height: 180%;
+}
+#header nav.path ol li:last-child {
+display: none;
+}
+
+#header div.title {
+border-bottom: 10px #ffffff solid;
+}
+#header div.title h1 {
+padding: 12px 5px 11px;
+font-size: 110%;
+}
+
+}
+/* ----- 767 ----- */
+
+
+
+/*
+==================================================
+  ボディ（下層ページ用）
+==================================================
+*/
+
+#body {
+margin: 20px 0 50px;
+}
+
+
+
+/* ----- ★767 ----- */
+@media screen and (max-width: 767px) {
+
+#body {
+margin: 10px 0 60px;
+}
+
+}
+/* ----- 767 ----- */
+
+
+
+/*
+==================================================
+  ポスト
+==================================================
+*/
+
+#post {
+padding: 30px 0;
+background-color: #f9f9f9;
+}
+
+/* ----- プレート ----- */
+#post div.plate {
+display: table;
+table-layout: fixed;
+width: 800px;
+margin: 0 auto;
+}
+/* 一時的に無効化（PRを1つにしたため）
+#post div.plate > div {
+display: table-cell;
+width: 50%;
+font-size: 94%;
+text-align: center;
+vertical-align: middle;
+}
+*/
+#post div.plate > div {
+display: table-cell;
+font-size: 94%;
+text-align: center;
+}
+
+
+
+/* ----- ★767 ----- */
+@media screen and (max-width: 767px) {
+
+#post {
+padding: 35px 0;
+}
+
+#post div.plate {
+display: block;
+width: auto;
+}
+#post div.plate > div {
+display: block;
+width: auto;
+margin: 0 0 25px;
+font-size: 100%;
+}
+#post div.plate > div:last-child {
+margin: 0;
+}
+
+}
+/* ----- 767 ----- */
+
+
+
+/*
+==================================================
+  フッタ
+==================================================
+*/
+
+#footer {
+margin: 0;
+padding: 40px 0 0;
+background-color: #5f5f5f;
+font-size: 90%;
+color: #f9f9f9;
+}
+#footer a {
+color: #f9f9f9;
+text-decoration: none;
+}
+#footer a:hover {
+text-decoration: underline;
+}
+#footer a img {
+border: none;
+}
+
+#footer div.plate {
+width: 100%;
+margin: 0 0 20px;
+}
+
+/* ----- メニュー ----- */
+#footer div.fnav {
+width: 50%;
+float: right;
+}
+#footer div.fnav nav {
+width: 100%;
+}
+#footer div.fnav nav ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+#footer div.fnav nav ul li {
+line-height: 140%;
+}
+#footer div.fnav nav ul.pc {
+width: 50%;
+float: left;
+}
+#footer div.fnav nav ul.pc li {
+margin: 0 15px 10px 0;
+}
+#footer div.fnav nav div.sp,
+#footer div.fnav nav ul.sp {
+display: none;
+}
+
+/* ----- 連絡先 ----- */
+#footer div.address {
+width: 50%;
+float: left;
+}
+#footer div.address address {
+margin: 0 30px 0 0;
+font-style: normal;
+}
+#footer div.address dl {
+margin: 0;
+padding: 0 0 95px;
+background: url(../../image/design/qr.gif) no-repeat 3px bottom;
+}
+#footer div.address dl dt {
+margin: 0 0 10px;
+}
+#footer div.address dl dd {
+margin: 0 0 0 3px;
+}
+#footer div.address dl dd p {
+margin: 0;
+line-height: 160%;
+}
+
+/* ----- ボトム ----- */
+#footer div.bottom {
+padding: 20px 0 30px;
+background-color: #4a4a4a;
+}
+#footer div.bottom ul {
+width: 50%;
+float: left;
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+#footer div.bottom ul li {
+display: inline-block;
+margin: 0 15px 0 5px;
+}
+#footer div.bottom ul li a {
+font-size: 12px;
+color: #c0c0c0;
+}
+
+/* ----- コピーライト ----- */
+#footer div.bottom div.copy {
+font-size: 13px;
+color: #c0c0c0;
+text-align: right;
+}
+#footer div.bottom div.copy small {
+font-size: 100%;
+}
+
+
+
+/* ----- ★767 ----- */
+@media screen and (max-width: 767px) {
+
+#footer {
+font-size: 100%;
+}
+
+#footer div.plate {
+margin: 0 0 50px;
+}
+
+#footer div.fnav {
+width: auto;
+float: none;
+margin: 0 0 30px;
+}
+#footer div.fnav nav ul.pc {
+display: none;
+}
+#footer div.fnav nav div.sp,
+#footer div.fnav nav ul.sp {
+display: block;
+}
+#footer div.fnav nav div.sp {
+margin: 0 5px 50px;
+}
+#footer div.fnav nav div.sp a {
+display: block;
+padding: 15px 5px;
+border: 1px #c0c0c0 solid;
+font-size: 120%;
+font-weight: bold;
+text-align: center;
+}
+#footer div.fnav nav div.sp a:hover {
+text-decoration: none;
+}
+#footer div.fnav nav ul li {
+float: left;
+width: 50%;
+margin: 0 0 30px;
+line-height: 100%;
+}
+#footer div.fnav nav ul li a {
+display: inline-block;
+margin: 0 5px;
+line-height: 140%;
+}
+#footer div.fnav nav ul li a:hover {
+text-decoration: none;
+}
+
+#footer div.address {
+width: auto;
+float: none;
+text-align: center;
+}
+#footer div.address address {
+margin: 0;
+}
+#footer div.address dl {
+padding: 0;
+background: none;
+}
+#footer div.address dl dt {
+width: 150px;
+margin: 0 auto 20px;
+}
+#footer div.address dl dd {
+margin: 0;
+}
+#footer div.address dl dd p {
+margin: 0;
+font-size: 13px;
+line-height: 180%;
+}
+
+#footer div.bottom {
+padding: 15px 0;
+}
+#footer div.bottom ul {
+display: none;
+}
+
+#footer div.bottom div.copy {
+font-size: 13px;
+text-align: center;
+}
+
+}
+/* ----- 767 ----- */
+
+
+
+/*
+==================================================
+  カテゴリーナビ（第三階層以下で使用）
+==================================================
+*/
+
+/* --- カテゴリーリンク --- */
+#navi #category {
+margin: 0 0 20px;
+padding: 0 0 1px;
+background-color: #f9f9f9;
+box-shadow: 0 0 3px 0 #c0c0c0;
+}
+/* 見出し */
+#navi #category h2 {
+margin: 0 0 10px;
+padding: 11px 7px 10px;
+background-color: #9f9f9f;
+font-size: 94%;
+font-weight: normal;
+color: #efefef;
+}
+/* メニュー */
+#navi #category ul {
+margin: 0 5px 10px;
+padding: 5px 0 3px;
+border-bottom: 1px #aaaaaa dotted;
+list-style-type: none;
+}
+#navi #category ul li {
+margin: 0 0 10px;
+font-size: 90%;
+line-height: 120%;
+}
+#navi #category a {
+color: #5f5f5f;
+text-decoration: none;
+}
+#navi #category a:hover {
+text-decoration: underline;
+}
+#navi #category a.active {
+font-weight: bold;
+}
+
+/* --- Ads --- */
+#navi div.pcHidden {
+display: none;
+}
+#navi aside.ads div.label,
+#navi aside.related div.label {
+margin: 0 0 10px;
+}
+#navi aside.ads div.label span {
+padding: 2px 4px;
+background-color: #9f9f9f;
+font-size: 80%;
+color: #efefef;
+}
+#navi aside.ads div.responsive {
+width: 160px;
+height: 600px;
+}
+.list_navi, .page_navi {
+width: 160px;
+height: 600px;
+}
+/* Ads 2（長いページのみ設置） */
+#navi aside.related {
+margin: 50px 0 0;
+}
+#navi aside.related div.responsive {
+width: 160px;
+height: 600px;
+}
+.navi_related {
+width: 160px;
+height: 600px;
+}
+
+
+
+/* ----- ★767 ----- */
+@media screen and (max-width: 767px) {
+
+#navi #category {
+margin: 0 0 70px;
+}
+#navi #category h2 {
+font-size: 100%;
+}
+#navi #category ul {
+margin: 25px 5px 20px;
+padding: 0;
+}
+#navi #category ul li {
+margin: 0 0 20px;
+font-size: 100%;
+}
+#navi #category a:hover {
+text-decoration: none;
+}
+
+#navi div.pcHidden {
+display: block;
+}
+#navi aside.ads {
+display: block;
+padding: 0 0 50px;
+text-align: center;
+}
+#navi aside.ads div.label {
+display: block;
+margin: 0 0 20px;
+}
+#navi aside.ads div.responsive {
+width: 100%;
+height: auto;
+}
+.list_navi, .page_navi {
+width: 100%;
+height: auto;
+max-width: 336px;
+min-height: 250px;
+max-height: 280px;
+margin: 0 auto;
+}
+#navi aside.related {
+display: none;
+}
+
+}
+/* ----- /767 ----- */
+
+
+
+/*
+==================================================
+  その他
+==================================================
+*/
+
+/* ----- フロートのクリア ----- */
+.multi::after {
+content: "";
+clear: both;
+display: block;
+}
+
+
+
+/* ----- Back to Top ----- */
+#backtop {
+display: none;
+position: fixed;
+z-index: 100;
+bottom: 40px;
+right: 10px;
+margin: 0;
+}
+#backtop a {
+display: block;
+width: 50px;
+height: 50px;
+background-color: #7f7f7f;
+border-radius: 50%;
+text-align: center;
+line-height: 50px;
+}
+#backtop a img {
+border: none;
+}
+
+/* ----- ★767 ----- */
+@media screen and (max-width: 767px) {
+
+#backtop {
+bottom: 35px;
+}
+body.fixed #backtop {
+z-index: -100;
+}
+
+}
+/* ----- 767 ----- */
+
+
+
+/* ----- Related Link ----- */
+#content .relatedLink {
+margin: 50px 10px 40px;
+padding: 20px 0 0;
+border-top: 1px #aaaaaa dotted;
+}
+#content .relatedLink nav.backLink {
+margin: 0 0 20px;
+text-align: center;
+}
+#content .relatedLink dl {
+padding: 30px 5px 0;
+border-top: 1px #aaaaaa dotted;
+}
+#content .relatedLink dl dt {
+margin: 0 0 14px;
+font-weight: bold;
+}
+#content .relatedLink dl dd {
+margin: 0;
+}
+#content .relatedLink dl dd ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+#content .relatedLink dl dd li {
+padding: 0 0 7px 23px;
+background: url(../../image/marks/file_s.gif) no-repeat left 0.2em;
+line-height: 140%;
+}
+
+/* ----- ★767 ----- */
+@media screen and (max-width: 767px) {
+
+#content .relatedLink {
+margin: 50px 5px 20px;
+}
+#content .relatedLink dl dt {
+margin: 0 0 20px;
+}
+#content .relatedLink dl dd li {
+padding: 0 0 18px 23px;
+}
+
+}
+/* ----- 767 ----- */
+
+
+
+/* ----- Pre Break ----- */
+.preBreak {
+word-wrap: break-word;
+white-space: -moz-pre-wrap;
+white-space: -pre-wrap;
+white-space: -o-pre-wrap;
+white-space: pre-wrap;
+font-family: monospace;
+}
+/*
+.preBreak {
+overflow: auto;
+}
+*/
+
+
+
+/* ----- New Window ----- */
+img.newWin {
+margin: 0 5px;
+border: none;
+vertical-align: middle;
+}
+
+
+
+/* ----- Border ----- */
+img.imgBorder {
+box-sizing: border-box;
+border: 1px #c0c0c0 solid;
+}
+.border {
+box-sizing: border-box;
+border: 1px #c0c0c0 solid;
+}
+
+
+
+/* ----- Hr ----- */
+hr.hd {
+visibility: hidden;
+margin: 1.5em 0;
+}
+
+

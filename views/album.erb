@@ -1,0 +1,18 @@
+
+<div class="album_big">
+<div class="sleeping">
+    <img class="sleeping_img" src="/image/sleeping.png" alt="">
+</div>
+<div class="album_cmt">Album...</div>
+</div>
+
+    <% @albums.each do |album|%>
+    <div class="image_card">
+        <div class="card">
+            
+            <img class="card-img-top" src ="/image/<%= album['image']%>">
+            <!-- <div class="album_margin"></div> -->
+        </div>
+    </div>
+    <% end %>
+    

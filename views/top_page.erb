@@ -1,0 +1,138 @@
+
+
+<h1 class=toppage>top page</h1>
+<hr style="width: 200px; color: white;">
+
+
+
+<div class="greeting">
+    
+    <%= @page_msg%>
+    <br>
+  越智ゼミの掲示板へようこそ<br>
+  <%= session[:name] %>さん。
+  
+  <% @post.each do |post|%>
+
+  <% end %>
+  
+</div>
+
+
+<% if session[:id] == '18' %>
+<div class='top-page'>
+  <div class="signup_btn">
+
+      <a href="/signup" class="border_slide_btn">Sign up</a>
+    <!-- <button onclick="location.href='/signup'" type="button" class="btn btn-outline-primary">signup</button> -->
+  </div>
+</div>
+<% end %>
+
+<br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      
+      <div class="ochi_card_form">
+        <div class="ochi_icon" style="max-width:200px;">
+            
+          <img src="/image/ochi_icon.jpg" alt="プロフィール画像" width="100%" style="object-fit: cover; border-radius: 50%;">
+        </div>
+        
+        <div class="ochi_card">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Welcome to OST</h5>
+              <p class="card-text">　観光には五感の全てが関係しますが、中でも重要なのがやはり「観る」ことです。ですから観光を創ろうとする人は、まずもって自分自身が物事を様々な角度から「観る」ことができねばなりません。
+                  　観光社会学は、観光資源の生滅について、「人と人との相互関係の仕組み」との関連から「観る」分野です。この分野では、資源は自然に生まれてどこかに隠されている、とは考えません。地域の物事に対し、誰かが特定の目的で活用しようと継続的に働きかけた時、初めてその物事が資源として生まれ変わるのです。
+                  　ただし当然、同じ物事を別の目的で活用しようとする人も現れ得ます。また、働きかけが継続しなければ、資源は再びただの物事に戻ります。したがって、観光資源の創生と持続を考えるならば、それに対する人々の働きかけの調整のあり方（人と人との相互関係の仕組み）から「観る」ことが不可欠なのです。
+                  　このように根本から「観る」力を養えば将来、多様な領域で活躍できるでしょう。
+                  
+                  　私自身はもっぱら、まち歩き観光やグリーンツーリズム、エコツーリズムなど、いわゆるオルターナティブ・ツーリズムあるいはCBT（コミュニティベースト・ツーリズム）を対象として、公正な観光資源化や、観光による公共的・社会的価値の創出について考究しています。
+                  　一方ゼミでのテーマは、「観光と地域」に関わる範囲内で自由にゼミ生に設定してもらってますので、年度によりメンバーにより、とても多様です。詳しくはゼミメンバーページで、卒論タイトル・要旨や3年次調査タイトルをご覧ください。
+                  
+                  </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-4 article">
+      <% @post.each do |post|%>
+      
+      <% date = Time.parse(post["date"]) %>
+      <p class="time">
+        <%= date.year %>/<%= date.mon %>/<%= date.mday %>/<%= date.hour %>:<%= date.min %>
+      </p>
+      <br><br>
+      <img class="acount_group_icon" src="/image/icon.jpg" alt="..." class="rounded-circle" width="35" height="35">
+      <div class="acount_group"><%= post["name"]%>さんの投稿 </div>
+      <br><br>
+      Title:   <%= post["tittle"]%>
+      <br>
+      <p class="tweet_text">
+        <%= post["content"]%> <br>
+      </p>
+      <img class="image" width="100%" src="/image/<%= post["image"] %>">
+      <br>
+      
+      <br>
+      
+      <%# <% if is_like(post["id"]) %> 
+      
+      <a href="/like/<%= post["id"] %>" id="like" class="float-right like"><i class="far fa-heart"></i></a>
+      
+      <%# <% else %>  
+      <a href="/unlike/<%= post["id"] %>" id="like" class="float-left"><i class="fas fa-heart"></i></a>
+      <%# <% e
+      nd  %> 
+      
+      <%= post['like_count']%>
+      
+      <br><br><br>
+      
+      <div class="border"></div>
+      
+      <% end %>  
+      
+      
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+      
+      
+    </div>
+    <div class="col-4">
+      <div class="member">
+        <div class="card" style="width: 14rem;">
+          <div class="card-body">
+            <h5>-member-</h5>
+            <% @users.each do |user|%>
+            <%= user["grade"]%>年次 <br>
+            <%= user["name"]%><br>
+            <br>
+            <% end%>
+<br>
+            <img class="two" src="/image/two.png" alt="">
+          </div>
+        </div>  
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  

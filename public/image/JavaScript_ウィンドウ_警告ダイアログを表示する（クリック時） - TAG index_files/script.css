@@ -1,0 +1,537 @@
+@charset "UTF-8";
+
+/*
+==================================================
+
+   JavaScript
+
+==================================================
+*/
+
+
+
+/*
+==================================================
+  レイアウト
+==================================================
+*/
+
+#main {
+float: right;
+width: 100%;
+margin: 0 0 0 -160px;
+}
+#content {
+margin: 0 0 0 170px;
+padding: 10px 0 1px;
+background-color: #ffffff;
+box-shadow: 0 0 3px 0 #c0c0c0;
+}
+#navi {
+float: left;
+width: 160px;
+margin: 0;
+}
+
+
+
+/* ----- ★767 ----- */
+@media screen and (max-width: 767px) {
+
+#main {
+float: none;
+margin: 0 0 30px;
+}
+#content {
+margin: 0;
+}
+#navi {
+float: none;
+width: 100%;
+}
+
+}
+/* ----- /767 ----- */
+
+
+
+/*
+==================================================
+  記事
+==================================================
+*/
+
+/* ----- 記事見出し ----- */
+#content header.articleHeader {
+margin: 0 10px 10px;
+padding: 2px;
+background-color: #fffdee;
+border-width: 1px;
+border-color: #ececec #c0c0c0 #c0c0c0 #ececec;
+border-style: solid;
+}
+#content header.articleHeader h2 {
+margin: 0;
+padding: 6px 15px 4px;
+border-width: 1px;
+border-color: #c0c0c0 #ececec #ececec #c0c0c0;
+border-style: solid;
+text-align: center;
+font-size: 120%;
+color: #ff0000;
+line-height: 120%;
+}
+
+/* ----- Ads ----- */
+#content aside.adsTop {
+margin: 0 10px;
+padding: 0 10px 10px;
+border-bottom: 1px #aaaaaa dotted;
+}
+#content aside.adsTop div.label {
+/* display: none; */
+margin: 0 0 10px;
+}
+#content aside.adsTop div.label span {
+padding: 2px 4px;
+background-color: #efefef;
+font-size: 80%;
+color: #9f9f9f;
+}
+#content aside.adsTop div.responsive {
+width: 728px;
+height: 90px;
+}
+.page_top {
+width: 728px;
+height: 90px;
+}
+
+/* ----- セクション ----- */
+#content > section {
+margin: 0 10px;
+padding: 1.6em 0 1em;
+}
+#content section section {
+margin: 2em 0;
+}
+
+/* ----- セクション内共通 ----- */
+/* 見出し（3） */
+#content section h3 {
+margin: 0 0 30px;
+padding: 8px 10px 7px;
+background-color: #ffd67b;
+font-size: 100%;
+line-height: 120%;
+}
+/* 説明 */
+#content section div.description {
+padding: 0 10px;
+}
+/* 段落 */
+#content section div.description p {
+margin: 0 0 1em;
+line-height: 180%;
+}
+/* 見出し（4） */
+#content section div.description h4 {
+margin: 0 0 1.4em;
+font-size: 110%;
+line-height: 140%;
+}
+#content section div.description h4::before {
+content: "【";
+font-family: sans-serif;
+}
+#content section div.description h4::after {
+content: "】";
+font-family: sans-serif;
+}
+/* 見出しカッコなし */
+#content section div.description h4.nm::before {
+content: "";
+}
+#content section div.description h4.nm::after,
+#content section div.description h4.sm::after {
+content: "";
+}
+/* 見出しマーク付き */
+#content section div.description h4.sm::before {
+content: "■";
+font-family: sans-serif;
+}
+/* pre */
+#content section div.description pre {
+margin: 0 0 1.5em;
+padding: 20px 10px;
+background-color: #f7fdfd;
+border: 1px #c0c0c0 dotted;
+line-height: 110%;
+}
+
+/* ----- 一般リスト（UL） ----- */
+#content section div.description ul {
+margin: 0 0 1em;
+padding: 0;
+list-style-type: none;
+}
+/* 項目 */
+#content section div.description ul li {
+padding: 0 0 5px 20px;
+background: url(../../image/marks/list.gif) no-repeat left top;
+line-height: 140%;
+}
+/* 項目（リストマークなし） */
+#content section div.description ul.nm li {
+padding: 0 0 5px 0;
+background: none;
+}
+/* 項目（ショートカット） */
+#content section div.description ul.shortcut li {
+padding: 0 0 5px 23px;
+background: url(../../image/marks/file_s.gif) no-repeat left 0.2em;
+}
+
+/* ----- ノートリスト（UL） ----- */
+#content section div.description ul.note {
+margin: 0 0 1em;
+padding: 0;
+list-style-type: none;
+}
+/* 項目 */
+#content section div.description ul.note li {
+margin: 0 0 0 1em;
+padding: 0 0 5px;
+background: none;
+text-indent: -1em;
+line-height: 140%;
+}
+#content section div.description ul.note li::before {
+content: "※";
+}
+
+/* ----- 記述リスト（DL） ----- */
+#content section div.description dl {
+margin: 1.3em 0 1.3em;
+}
+/* 用語 */
+#content section div.description dl dt {
+margin: 1.6em 0 1em;
+line-height: 140%;
+font-weight: bold;
+}
+#content section div.description dl dt span {
+font-weight: normal;
+}
+/* 説明 */
+#content section div.description dl dd {
+margin: 0 0 4px 1em;
+padding: 0 0 1px;
+line-height: 140%;
+}
+
+/* ----- 記述リスト（用語部分を細字） ※ins要素等で使用 ----- */
+#content section div.description dl.moderate dt {
+font-weight: normal;
+}
+#content section div.description dl.moderate dt::before {
+content: "■";
+font-family: sans-serif;
+}
+
+/* ----- テーブル全般 ----- */
+#content section div.description table {
+margin: 0 0 1.5em;
+background-color: #ffffff;
+border-collapse: collapse;
+}
+/* 境界線 */
+#content section div.description table,
+#content section div.description table th,
+#content section div.description table td {
+border: 1px #c0c0c0 solid;
+}
+/* キャプション */
+#content section div.description table caption {
+padding: 0 0 5px;
+text-align: left;
+font-weight: bold;
+font-size: 110%;
+}
+#content section div.description table caption p {
+margin: 0;
+font-weight: normal;
+}
+/* ヘッダ見出し */
+#content section div.description table thead th {
+padding: 5px 10px;
+background-color: #deefff;
+line-height: 120%;
+}
+/* ボディ見出し */
+#content section div.description table tbody th {
+padding: 5px 10px;
+background-color: #f5f5f5;
+font-weight: normal;
+text-align: left;
+line-height: 140%;
+}
+/* データセル */
+#content section div.description table tbody td {
+min-width: 4em;
+padding: 10px;
+vertical-align: top;
+line-height: 140%;
+}
+
+/* ----- 概要 ----- */
+#content section.overview figure {
+margin: 30px 0 0;
+padding: 20px 15px;
+background-color: #efefef;
+}
+#content section.overview figure.sup {
+margin: 30px 0 20px;
+}
+#content section.overview figure p {
+margin: 0;
+line-height: 140%;
+}
+
+/* ----- コード・サンプル ----- */
+/* ボックス */
+#content section.example div.exampleInner {
+padding: 40px 15px 0;
+background: #f7f7f7 url(../../image/marks/samplecode.gif) no-repeat 1px 1px;
+border: 1px #c0c0c0 solid;
+}
+/* ユニット */
+#content section.example div.exampleInner > figure {
+margin: 0 0 30px;
+border-bottom: 1px #cccccc solid;
+}
+#content section.example div.exampleInner > figure.single {
+border-bottom: none;
+}
+#content section.example div.exampleInner > figure > figcaption {
+margin: 0 0 1em;
+font-weight: bold;
+line-height: 140%;
+}
+#content section.example div.exampleInner > figure > figcaption::before {
+content: "■";
+font-family: sans-serif;
+}
+#content section.example div.exampleInner > figure p {
+line-height: 140%;
+}
+/* コード */
+#content section.example figure pre.code {
+margin: 0 0 30px;
+}
+#content section.example figure pre.code code {
+line-height: 110%;
+}
+/* 表示例 */
+#content section.example figure dl.display {
+margin: 0 0 10px;
+}
+#content section.example figure dl.display > dt {
+margin: 0 0 5px;
+font-size: 90%;
+font-weight: bold;
+color: #808080;
+}
+#content section.example figure dl.display > dd {
+margin: 0;
+padding: 15px;
+background-color: #efefef;
+}
+
+/* ----- Ads ----- */
+#content aside.adsBottom {
+margin: 0 0 40px;
+padding: 30px 20px 0;
+}
+#content aside.adsBottom div.label {
+/* display: none; */
+margin: 0 0 10px;
+}
+#content aside.adsBottom div.label span {
+padding: 2px 4px;
+background-color: #efefef;
+font-size: 80%;
+color: #9f9f9f;
+}
+/*
+#content aside.adsBottom div.responsive {
+width: 728px;
+height: 90px;
+}
+.page_bottom {
+width: 728px;
+height: 90px;
+}
+*/
+#content aside.adsBottom div.responsive {
+width: 100%;
+}
+.page_bottom {
+max-width: 728px;
+min-height: 250px;
+max-height: 280px;
+}
+
+
+
+/* ----- ★1023 ----- */
+@media screen and (max-width: 1023px) {
+
+#content aside.adsTop {
+padding: 0 10px 30px;
+}
+#content aside.adsTop div.responsive {
+width: 100%;
+height: auto;
+max-width: 728px;
+}
+.page_top {
+width: 100%;
+height: auto;
+max-width: 728px;
+min-height: 90px;
+max-height: 100px;
+}
+
+/*
+#content aside.adsBottom div.responsive {
+width: 100%;
+height: auto;
+max-width: 728px;
+}
+.page_bottom {
+width: 100%;
+height: auto;
+max-width: 728px;
+min-height: 90px;
+max-height: 100px;
+}
+*/
+
+}
+/* ----- /1023 ----- */
+
+
+
+/* ----- ★767 ----- */
+@media screen and (max-width: 767px) {
+
+#content header.articleHeader {
+margin: 0 5px 10px;
+}
+#content header.articleHeader h2 {
+padding: 6px 5px 4px;
+font-size: 100%;
+}
+
+#content aside.adsTop {
+margin: 0;
+padding: 20px 0 60px;
+text-align: center;
+}
+#content aside.adsTop div.label {
+display: block;
+margin: 0 0 20px;
+}
+#content aside.adsTop div.responsive {
+width: 320px;
+height: 100px;
+margin: 0 auto;
+}
+.page_top {
+width: 320px;
+height: 100px;
+}
+
+#content > section {
+margin: 0 5px;
+}
+
+#content section h3 {
+padding: 8px 5px 7px;
+}
+#content section div.description {
+padding: 0;
+}
+
+#content section div.over {
+width: 100%;
+margin: 0 0 10px;
+overflow: auto;
+}
+#content section div.over::-webkit-scrollbar{
+height: 5px;
+}
+#content section div.over::-webkit-scrollbar-track{
+background-color: #efefef; 
+}
+#content section div.over::-webkit-scrollbar-thumb {
+background-color: #c0c0c0; 
+}
+
+#content section div.description table tbody td {
+padding: 12px 5px;
+}
+
+#content section.overview figure {
+padding: 20px 5px;
+}
+
+#content section.example div.exampleInner {
+padding: 40px 5px 0;
+}
+
+#content section.example figure dl.display > dt {
+font-size: 100%;
+}
+#content section.example figure dl.display > dd {
+padding: 10px;
+}
+
+#content section div.description pre {
+line-height: 120%;
+}
+#content section.example figure pre.code code {
+line-height: 120%;
+}
+
+#content aside.adsBottom {
+padding: 50px 0 50px;
+text-align: center;
+}
+#content aside.adsBottom div.label {
+display: block;
+margin: 0 0 20px;
+}
+/*
+#content aside.adsBottom div.responsive {
+width: 100%;
+height: auto;
+}
+.page_bottom {
+width: 100%;
+height: auto;
+min-height: 250px;
+max-height: 280px;
+}
+*/
+.page_bottom {
+max-width: 336px;
+margin: 0 auto;
+}
+
+}
+/* ----- /767 ----- */
+
+

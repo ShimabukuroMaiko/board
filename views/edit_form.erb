@@ -1,0 +1,39 @@
+<form action="/edit_form/<%= @edit['id'] %>" method="POST" enctype="multipart/form-data">
+  <!-- <div class="edit_form_row">
+  
+    <div class="form_group1">
+      <label class="edit_title" for="inputTittle">Tittle</label><br>
+      <input name="tittle" type="tittle" class="form_control" id="inputTittle" value="<%= @edit['tittle']%>" style="width:500px;">
+    </div><br><br><br>
+    <div class="form_group2">
+      <label class="edit_content" for="inputcontent4">Content</label><br>
+      <textarea name="content" type="content" class="form_control" id="inputContent4" value="<%= @edit['content'] %>"></textarea>
+    </div>
+    
+  </div>
+  <input type="submit" value="post">
+   -->
+  
+  
+      <div class="form_row">
+        <div class="col11">
+            <label class="edit_title" for="inputTittle">Tittle</label><br>
+          <input name="tittle" type="tittle" class="edit_form_control" value="<%= @edit['tittle']%>">
+        </div><br><br><br>
+        <div class="col2">
+            <label class="edit_content" for="inputcontent4">Content</label><br>
+          <textarea name="content" type="content" class="edit_form_control1" rows="5" placeholder="<%= @edit['content']%>"></textarea>
+        </div>
+<!-- 
+        <input class="edit_submit" type="submit" value="&#xf064;">
+        <i class="fa-3x fas fa-share"></i>
+      </div> -->
+  
+      <button class="btn_submit" type="submit" style="font-size: 20px;">
+          <i class="fas fa-share"></i><span class="btn_submit"> submit</span> 
+      </button>
+
+
+</form>
+
+

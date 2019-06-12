@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+        
+        </div>
+        
+        <div class="col-4 mypage_article">
+            <div class="name">
+                
+                    <div class="edit_msg">
+                            <%= @edit_msg%>
+                        </div>
+                <%= session[:name] %>さん。</div><br><br>
+                
+                <% @post.each do |post|%>
+                <div class="post">
+                    
+                    <div class="daytime">
+                        <% date = Time.parse(post["date"]) %>
+                        <p>
+                            <%= date.year %>/
+                            <%= date.mon %>/
+                            <%= date.mday %>/
+                            <%= date.hour %>:
+                            <%= date.min %>
+                        </p>
+                    </div><br>
+                    
+                    <img src="/image/icon.jpg" alt="..." class="rounded-circle" width="35" height="35">
+                    
+                    <span id="creater_name"><%= session[:name]%>さんの投稿</span>
+                    <br><br> Title:
+                    <%= post["tittle"]%>
+                    <br><br>
+                    <%= post["content"]%>
+                    <br><br>
+                    <img class="image" width="100%" src="/image/<%= post['image']%>">
+                    <br><br> 
+                    <!-- <a class="edit_form" href="/edit_form/<%= post['id'] %>">edit</a><br> -->
+                    <div class="icon2">
+                        <a id="edit_icon" href="/edit_form/<%= post['id'] %>">
+                            <i class="far fa-comment-dots"></i>
+                        </a>
+                        <br><br>
+                        
+                        <p><a id="trash_icon" href="/delete/<%= post['id'] %>" onClick="disp(); return false;">
+                            <i class="fa-x fas fa-trash"></i></p> 
+                           
+                        </a>
+                        
+
+
+                        
+                        
+                    </div>
+                    
+                    <hr class="line" style="margin-top: 50px;">
+                    <!-- <div class="border">
+                    </div> -->
+                </div>
+                
+                <% end %>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div class="btn_pst"></div> 
+       
+    <div class="col-4">
+
+            
+        <a id="fab" href="/post">
+            <i class="fas fa-pencil-alt"></i>
+            
+        </a>
+        <img class="climbing" src="/image/climbing.png" alt="">
+     
+    </div>
+    
+    
+    
+</div>
+</div>

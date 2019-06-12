@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+/*
+==================================================
+
+   基本・使用方法 共通スタイル
+
+==================================================
+*/
+
+
+
+/*
+==================================================
+  テキストスタイル
+==================================================
+*/
+
+/*
+デフォルトスタイルセクション内では強調と重要は使えない
+*/
+
+/* ----- 強調 ----- */
+/* ----- 記述・メモセクションで使用 ----- */
+#content section.description em,
+#content aside.memo div em {
+font-style: normal;
+font-weight: bold;
+}
+
+/* ----- 重要 ----- */
+/* ----- 記述・メモセクションで使用 ----- */
+#content section.description strong,
+#content aside.memo div strong {
+
+}
+
+/* ----- マーク ----- */
+#content mark {
+background-color: transparent;
+}
+#content mark.mark {
+background-color: #ffff00;
+}
+
+/* ----- 定義 ----- */
+/* ----- 記述セクションで使用 ----- */
+#content section.description dfn {
+font-style: normal;
+font-weight: bold;
+}
+
+/* ----- 作品タイトル ----- */
+/* ----- 記述セクションで使用 ----- */
+#content section.description cite {
+font-style: normal;
+}
+
+/* ----- 用語 ----- */
+#content i.term {
+font-style: normal;
+font-weight: bold;
+}
+
+/* ----- 声（鉤括弧） ----- */
+#content i.voice {
+font-style: normal;
+}
+#content i.voice::before {
+content: "「";
+}
+#content i.voice::after {
+content: "」";
+}
+
+/* ----- キーワード ----- */
+#content b.keyword {
+
+}
+
+/* ----- 引用 ----- */
+#content section.description q {
+quotes: "\"" "\"" "'" "'";
+}
+#content section.description i.voice q {
+quotes: "" "" "" "";
+}
+
+/* ----- 入力キー ----- */
+#content kbd.key::before {
+content: "「";
+}
+#content kbd.key::after {
+content: "」";
+}
+#content kbd.key kbd {
+font-weight: bold;
+}
+
+
+/* ----- 詳細未確認（マーク付き） ----- */
+#content span.unidentified::before {
+content: url(../../image/marks/kouji.gif);
+}
+
+/* ----- 不確か ----- */
+#content .uncertain {
+color: #808080;
+}
+
+/* ----- マークのフォントを指定（IEの不具合を修正） ----- */
+#content span.mark {
+font-family: sans-serif;
+}
+
+/* ----- コードの色分け ----- */
+/* 要素 or セレクタ (Red) */
+#content code mark,
+#content code span {
+color: #cc0000;
+}
+#content .soElem {
+color: #cc0000;
+}
+#content code mark.mark {
+background-color: #ffff00;
+color: #555555;
+}
+/* 属性 (Green) */
+#content .soAttr {
+color: #008040;
+}
+/* プロパティ (Green) */
+#content .soPro {
+color: #008040;
+}
+/* 変数 (Green) */
+#content .soVar {
+color: #008040;
+}
+/* 値 (Blue) */
+#content .soValue {
+color: #0080c0;
+}
+/* オプション (Navy) */
+#content .soOpt {
+color: #4054a4;
+}
+/* クラス名 or ID名 (Gold) */
+#content .soCi {
+color: #808000;
+}
+/* コメント等 (Gray) */
+#content .soOther {
+color: #808080;
+}
+/* テキスト (Black) */
+#content .soText {
+color: #555555;
+}
+/* 廃止 (Gray) */
+#content .absent {
+color: #808080;
+}
+
+
